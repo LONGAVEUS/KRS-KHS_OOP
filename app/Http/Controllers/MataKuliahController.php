@@ -14,7 +14,7 @@ class MataKuliahController extends Controller
         $daftarMataKuliah = MataKuliah::all();
 
 
-        return view('matakuliah.index', compact('daftarMataKuliah'));
+        return view('matakuliah', compact('daftarMataKuliah'));
     }
 
     public function create()
