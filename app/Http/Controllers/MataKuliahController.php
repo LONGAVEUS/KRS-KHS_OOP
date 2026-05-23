@@ -14,12 +14,14 @@ class MataKuliahController extends Controller
         $daftarMataKuliah = MataKuliah::all();
 
 
-        return view('matakuliah', compact('daftarMataKuliah'));
+        return view('matakuliah.matakuliah', compact('daftarMataKuliah'));
     }
 
     public function create()
     {
         return view('matakuliah.create');
+
+
     }
 
     public function store(Request $request)
@@ -42,6 +44,7 @@ class MataKuliahController extends Controller
 
         return redirect()->route('matakuliah.index')->with('sukses', 'Mata Kuliah berhasil ditambahkan!');
     }
+
 }
 
 
