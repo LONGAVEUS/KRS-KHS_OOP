@@ -22,24 +22,19 @@
     @endif
 
     <form action="{{ route('krs.store') }}" method="POST">
-        @csrf
+    @csrf
+    
+    <input type="hidden" name="mahasiswa_id" value="3312511130">
+    <div class="mb-4">
+        <label class="block mb-2 text-sm font-medium text-gray-900">Pilih Mata Kuliah</label>
+        <select name="kodeMK" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+            @foreach($mataKuliah as $mk)
+                <option value="{{ $mk->kodeMK }}">{{ $mk->namaMK }} ({{ $mk->sks }} SKS)</option>
+            @endforeach
+        </select>
+    </div>
 
-        <div class="p-4 mb-4 text-sm text-gray-500 dark:text-gray-400 text-center font-medium">
-        Belum ada data mata kuliah di sini.
-        </div>
-
-        <div class="flex justify-between items-center border-t border-gray-200 dark:border-gray-700 pt-4">
-            <a href="{{ route('krs.index') }}" class="text-gray-500 bg-white hover:bg-gray-100
-            focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5
-            py-2.5 hover:text-gray-900 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600">
-                Kembali
-            </a>
-            <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none
-             focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700
-             dark:focus:ring-blue-800">
-                Simpan
-            </button>
-        </div>
-    </form>
+    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">Simpan</button>
+</form>
 </div>
 @endsection

@@ -21,18 +21,27 @@ class NilaiController extends Controller
     }
 
     public function store(Request $request)
-    {
-        $request->validate([
-            'mahasiswa_id'   => 'required|string',
-            'matakuliah_id'  => 'required|string',
-            'semesterTarget' => 'required|integer|between:1,8',
-            'nilaiAngka'     => 'required|numeric|min:0|max:100',
-        ]);
+{
+    $request->validate([
+        'mahasiswa_id'   => 'required|string',
+        'matakuliah_id'  => 'required|string',
+        'semesterTarget' => 'required|integer|between:1,8',
+        'nilaiAngka'     => 'required|numeric|min:0|max:100',
+    ]);
 
-        $nilai = new Nilai($request->all());
-        $nilai->nilaiHuruf = $nilai->konversiKeHuruf();
-        $nilai->save();
+    // Membuat instance objek nilai baru
+    $nilai = new Nilai();
+    $nilai->mahasiswa_id = $request->mahasiswa_id;
 
-        return redirect()->route('nilai.index')->with('sukses', 'Nilai berhasil ditambahkan!');
+    $nilai->matakuliah_id = $request->matakuliah_id;
+
+    $nilai->semesterTarget = $request->semesterTarget;
+    $nilai->nilaiAngka = $request->nilaiAngka;
+
+    $nilai->nilaiHuruf = $nilai->konversiKeHuruf();
+    $nilai->save();
+
+        return redirect()->route('nilai.index')->with('sukses', 'Nilai dummy berhasil disimpan!');
     }
 }
+

@@ -27,8 +27,9 @@ class KrsController extends Controller
             'kodeMK'       => 'required|exists:mata_kuliah,kodeMK',
         ]);
 
-        $krs = Krs::create([
+        $krs = Krs::firstOrCreate([
             'mahasiswa_id' => $request->mahasiswa_id,
+        ], [
             'totalSKS'     => 0
         ]);
 

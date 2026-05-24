@@ -19,7 +19,7 @@ class Nilai extends Model
 
     public function mahasiswa()
     {
-        return $this->belongsTo(Mahasiswa::class, 'mahasiswa_id', 'id');
+        return $this->belongsTo(MataKuliah::class, 'matakuliah_id', 'kodeMK');
     }
 
     public function matakuliah()
@@ -31,10 +31,10 @@ class Nilai extends Model
     {
         $angka = $this->nilaiAngka;
 
-        if ($angka >= 80) return 'A';
-        elseif ($angka >= 70) return 'B';
-        elseif ($angka >= 60) return 'C';
-        elseif ($angka >= 50) return 'D';
+        if ($angka >= 4.0) return 'A';
+        elseif ($angka >= 3.0) return 'B';
+        elseif ($angka >= 2.0) return 'C';
+        elseif ($angka >= 1.0) return 'D';
         else return 'E';
     }
 
