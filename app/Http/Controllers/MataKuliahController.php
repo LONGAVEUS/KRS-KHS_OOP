@@ -45,6 +45,18 @@ class MataKuliahController extends Controller
         return redirect()->route('matakuliah.index')->with('sukses', 'Mata Kuliah berhasil ditambahkan!');
     }
 
+    public function destroy($id)
+    {
+        // Mencari data berdasarkan Primary Key (kodeMK)
+        $matakuliah = MataKuliah::findOrFail($id);
+
+        // Eksekusi penghapusan data
+        $matakuliah->delete();
+
+        // Lempar kembali ke halaman utama dengan pesan sukses
+        return redirect()->route('matakuliah.index')->with('sukses', 'Mata Kuliah berhasil dihapus!');
+    }
+
 }
 
 
