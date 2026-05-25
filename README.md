@@ -1,5 +1,5 @@
 # 🏛️ Sistem Pengisian KRS dan KHS
-
+https://github.com/LONGAVEUS/KRS-KHS_OOP/blob/main/README.md
 <p align="center">
   <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-rgb-red.svg" width="300" alt="Laravel Logo">
 </p>
@@ -16,9 +16,9 @@
 
 Proyek ini dikembangkan oleh Kelompok 8 sebagai bagian dari tugas praktikum Pemrograman Berorientasi Objek (PBO):
 
-* **Arnol Hutagalung** (3312511130) - *Ketua Tim & Programmer Modul Mata Kuliah*
-* **Wulan Fawwazia** (3312501105) - *Anggota & Programmer Modul Nilai & KHS*
-* **Naila Tenri Azera Narang** (3312501116) - *Anggota & Programmer Modul KRS*
+* **Arnol Hutagalung** (3312511130) - *Ketua Tim & Programmer  Mata Kuliah*
+* **Wulan Fawwazia** (3312501105) - *Anggota & Programmer Nilai*
+* **Naila Tenri Azera Narang** (3312501116) - *Anggota & Programmer KRS*
 
 ---
 
