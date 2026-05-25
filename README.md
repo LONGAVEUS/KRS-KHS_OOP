@@ -10,6 +10,8 @@ https://github.com/LONGAVEUS/KRS-KHS_OOP/blob/main/README.md
   <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
 </p>
 
+<img width="804" height="354" alt="image" src="https://github.com/user-attachments/assets/762718ca-245f-4bdf-8362-0a48480655ad" />
+
 ---
 
 ## 👥 Kelompok 8 (IF-2PD-08)
